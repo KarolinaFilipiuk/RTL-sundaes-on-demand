@@ -15,7 +15,11 @@ const SummaryForm = () => {
   const checboxLabel = (
     <span>
       I agree to
-      <OverlayTrigger trigger="hover" placement="right" overlay={popover}>
+      <OverlayTrigger
+        // trigger={['hover', 'focus']}
+        placement="right"
+        overlay={popover}
+      >
         <span style={{ color: 'blue' }}>Terms and Conditions</span>
       </OverlayTrigger>
     </span>

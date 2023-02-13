@@ -1,4 +1,4 @@
-import { getByText, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import SummaryForm from '../SummaryForm';
 import userEvent from '@testing-library/user-event';
 
@@ -33,8 +33,8 @@ describe('Checkbox and button in SummaryForm', () => {
 
 describe('Popover in SummaryForm', () => {
   test('Popover responds to hover', async () => {
-    render(<SummaryForm />);
     const user = userEvent.setup();
+    render(<SummaryForm />);
     const nullPopover = screen.queryByText(
       /no ice cream will actually be delivered/i
     );
